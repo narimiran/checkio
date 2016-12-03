@@ -1,6 +1,5 @@
 def checkio(expression):
     a = [e for e in expression if e in '{[()]}']
-    print(a)
     brackets = {'{': '}',
                 '[': ']',
                 '(': ')'}
@@ -9,7 +8,7 @@ def checkio(expression):
         if char in brackets.keys():
             stack.append(char)
         elif not stack or brackets[stack.pop()] != char:
-                return False
+            return False
     return not stack
 
 
