@@ -1,7 +1,6 @@
 import numpy as np
 
 def checkio(data):
-    # data = np.array([data[0]] + data[::-1])
     data = np.array(data + [data[0]])
     return abs(0.5 * sum(np.linalg.det(data[i:i+2]) for i in range(data.shape[0]-1)))
 
