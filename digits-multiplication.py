@@ -1,10 +1,8 @@
 def checkio(number):
-    a = str(number)
-    total = 1
-    for digit in a:
-        if int(digit):
-            total *= int(digit)
-    return total
+    result = 1
+    for digit in str(number):
+        result *= int(digit) if int(digit) else 1
+    return result
 
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
