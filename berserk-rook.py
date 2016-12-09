@@ -1,6 +1,6 @@
 def berserk_rook(berserker, enemies):
-    me = (ord(berserker[0])-96, int(berserker[1]))
-    them = {(ord(enemy[0])-96, int(enemy[1])) for enemy in enemies}
+    me = (ord(berserker[0]), int(berserker[1]))
+    them = {(ord(enemy[0]), int(enemy[1])) for enemy in enemies}
     max_path = 0
     stack = [(me, set())]
 
