@@ -1,11 +1,9 @@
-def min(*args, **kwargs):
-    key = kwargs.get("key", None)
-    return sorted(args if len(args) > 1 else args[0], **kwargs)[0]
+def min(*args, key=None, rev=False):
+    return sorted(args if len(args) > 1 else args[0], key=key, reverse=rev)[0]
 
 
-def max(*args, **kwargs):
-    key = kwargs.get("key", None)
-    return min(*args, **kwargs, reverse=True)
+def max(*args, key=None):
+    return min(*args, key=key, rev=True)
 
 
 if __name__ == '__main__':
